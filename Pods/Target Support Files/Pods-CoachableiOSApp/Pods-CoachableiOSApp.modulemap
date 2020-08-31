@@ -1,0 +1,6 @@
+framework module Pods_CoachableiOSApp {
+  umbrella header "Pods-CoachableiOSApp-umbrella.h"
+
+  export *
+  module * { export * }
+}

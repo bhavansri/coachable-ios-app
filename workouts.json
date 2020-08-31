@@ -1,0 +1,60 @@
+{
+  "workouts": [
+    {
+      "title": "Steve Nash Workout",
+      "duration": 20,
+      "description": "This workout incorporates different routines and scoring variations that Hall of Famer Steve Nash warms up to before games",
+      "audioFilePath": "gs://coachable-7d155.appspot.com/Dr Dre- Still Dre instrumental.mp3",
+      "exercises": [
+        {
+          "title": "3PT Shooting - Wings",
+          "duration": 5
+        },
+        {
+          "title": "3PT Shooting - Top",
+          "duration": 2
+        },
+        {
+          "title": "3PT Shooting - Corners",
+          "duration": 5
+        },
+        {
+          "title": "Hooks",
+          "duration": 4
+        },
+        {
+          "title": "Layups",
+          "duration": 2
+        },
+        {
+          "title": "free throws",
+          "duration": 2
+        }
+      ]
+    },
+    {
+      "title": "The Ultimate 10 Minute Basketball Shooting Workout",
+      "duration": 10,
+      "description": "This workout works on your 3PT range with different shooting variations",
+      "audioFilePath": "gs://coachable-7d155.appspot.com/Pop Smoke - Dior Instrumental.mp3",
+      "exercises": [
+        {
+          "title": "Corner to Corner 3s",
+          "duration": 1.5
+        },
+        {
+          "title": "Corner to Wing 3s",
+          "duration": 1.5
+        },
+        {
+          "title": "Wing to Top 3s",
+          "duration": 1.5
+        },
+        {
+          "title": "Slot to Slot 3s",
+          "duration": 1.5
+        }
+      ]
+    }
+  ]
+}
