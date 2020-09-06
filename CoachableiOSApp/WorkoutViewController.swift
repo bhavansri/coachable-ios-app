@@ -33,6 +33,7 @@ final class WorkoutViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        
         exercisesTableView.register(UITableViewCell.self, forCellReuseIdentifier: "exerciseCell")
         exercisesTableView.delegate = self
         exercisesTableView.dataSource = self
@@ -42,6 +43,8 @@ final class WorkoutViewController: UIViewController {
     
     private func setupViews() {
         descriptionLabel.numberOfLines = 0
+        exercisesTableView.separatorStyle = .none
+        startButton.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(didPressStartButton)))
         titleLabel.translatesAutoresizingMaskIntoConstraints = false
         descriptionLabel.translatesAutoresizingMaskIntoConstraints = false
         durationLabel.translatesAutoresizingMaskIntoConstraints = false
@@ -55,7 +58,7 @@ final class WorkoutViewController: UIViewController {
         view.addSubview(startButton)
         
         NSLayoutConstraint.activate([
-            titleLabel.topAnchor.constraint(equalTo: view.topAnchor, constant: 10),
+            titleLabel.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 10),
             titleLabel.leftAnchor.constraint(equalTo: view.leftAnchor, constant: 25),
             titleLabel.rightAnchor.constraint(equalTo: view.rightAnchor, constant: -25)
         ])
@@ -70,7 +73,7 @@ final class WorkoutViewController: UIViewController {
             exercisesTableView.topAnchor.constraint(equalTo: descriptionLabel.bottomAnchor, constant: 20),
             exercisesTableView.leftAnchor.constraint(equalTo: view.leftAnchor, constant: 25),
             exercisesTableView.rightAnchor.constraint(equalTo: view.rightAnchor, constant: -25),
-            exercisesTableView.heightAnchor.constraint(equalToConstant: 150)
+            exercisesTableView.heightAnchor.constraint(equalToConstant: 250)
         ])
         
         NSLayoutConstraint.activate([
@@ -87,6 +90,19 @@ final class WorkoutViewController: UIViewController {
         titleLabel.text = workout.title
         descriptionLabel.text = workout.description
         durationLabel.text = String(workout.duration)
+    }
+    
+    @objc private func didPressStartButton() {
+        workout.retrieveAudioURL() { [weak self] url in
+            guard let `self` = self, let audioURL = url else {
+                return
+            }
+            
+            let playerViewController = PlayerViewController(
+                title: self.workout.title,
+                audioURL: audioURL)
+            self.navigationController?.pushViewController(playerViewController, animated: true)
+        }
     }
 }
 

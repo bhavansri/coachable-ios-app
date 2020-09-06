@@ -14,7 +14,6 @@ import Foundation
 class WorkoutService {
     
     let firebaseReference: DatabaseReference!
-    let storageReference = Storage.storage().reference()
     
     init() {
         firebaseReference = Database.database().reference()
@@ -36,20 +35,5 @@ class WorkoutService {
             
             completion(workouts)
         })
-    }
-    
-    func retrieveAudioURL(for workout: Workout) -> URL? {
-        let audioReference = storageReference.child(workout.audioFilePath)
-        var audioURL: URL?
-        
-        audioReference.downloadURL { url, error in
-            if let error = error {
-                print(error)
-            } else {
-                audioURL = url
-            }
-        }
-        
-        return audioURL
     }
 }

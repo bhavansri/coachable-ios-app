@@ -24,6 +24,8 @@
 		6E59F44024FAE37900923BF0 /* WorkoutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E59F43F24FAE37900923BF0 /* WorkoutViewController.swift */; };
 		6E59F44224FAEBF100923BF0 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 6E59F44124FAEBF100923BF0 /* GoogleService-Info.plist */; };
 		6EA09CB024FC95C700FDDD9C /* UIView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EA09CAF24FC95C600FDDD9C /* UIView+Extensions.swift */; };
+		6EA09CB524FD813200FDDD9C /* PlayerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EA09CB324FD813200FDDD9C /* PlayerViewController.swift */; };
+		6EA09CB624FD813200FDDD9C /* PlayerViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6EA09CB424FD813200FDDD9C /* PlayerViewController.xib */; };
 		6F5A5A0D13ADCA36D35490DD /* Pods_CoachableiOSApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FECF77A6D601600201BFC080 /* Pods_CoachableiOSApp.framework */; };
 		A7EA11D11571439E7D54B628 /* Pods_CoachableiOSApp_CoachableiOSAppUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C3253BBBDB02862DA5948239 /* Pods_CoachableiOSApp_CoachableiOSAppUITests.framework */; };
 /* End PBXBuildFile section */
@@ -71,6 +73,8 @@
 		6E59F43F24FAE37900923BF0 /* WorkoutViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkoutViewController.swift; sourceTree = "<group>"; };
 		6E59F44124FAEBF100923BF0 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		6EA09CAF24FC95C600FDDD9C /* UIView+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extensions.swift"; sourceTree = "<group>"; };
+		6EA09CB324FD813200FDDD9C /* PlayerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerViewController.swift; sourceTree = "<group>"; };
+		6EA09CB424FD813200FDDD9C /* PlayerViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PlayerViewController.xib; sourceTree = "<group>"; };
 		B875F55F8E98588386E8B8C8 /* Pods-CoachableiOSApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CoachableiOSApp.debug.xcconfig"; path = "Target Support Files/Pods-CoachableiOSApp/Pods-CoachableiOSApp.debug.xcconfig"; sourceTree = "<group>"; };
 		C1DAF8E563A967972AFE733C /* Pods-CoachableiOSApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CoachableiOSApp.release.xcconfig"; path = "Target Support Files/Pods-CoachableiOSApp/Pods-CoachableiOSApp.release.xcconfig"; sourceTree = "<group>"; };
 		C3253BBBDB02862DA5948239 /* Pods_CoachableiOSApp_CoachableiOSAppUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CoachableiOSApp_CoachableiOSAppUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -155,6 +159,8 @@
 				6E59F43924FAAF5900923BF0 /* Workout.swift */,
 				6E59F43B24FAB4DC00923BF0 /* WorkoutService.swift */,
 				6E59F43F24FAE37900923BF0 /* WorkoutViewController.swift */,
+				6EA09CB324FD813200FDDD9C /* PlayerViewController.swift */,
+				6EA09CB424FD813200FDDD9C /* PlayerViewController.xib */,
 			);
 			path = CoachableiOSApp;
 			sourceTree = "<group>";
@@ -318,6 +324,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				6E0E28BD24E9A69F000FA3AE /* LaunchScreen.storyboard in Resources */,
+				6EA09CB624FD813200FDDD9C /* PlayerViewController.xib in Resources */,
 				6E59F44224FAEBF100923BF0 /* GoogleService-Info.plist in Resources */,
 				6E0E28BA24E9A69F000FA3AE /* Assets.xcassets in Resources */,
 				6E0E28B824E9A69D000FA3AE /* Main.storyboard in Resources */,
@@ -457,6 +464,7 @@
 				6E0E28B324E9A69D000FA3AE /* SceneDelegate.swift in Sources */,
 				6E0E28E424E9B173000FA3AE /* Color.swift in Sources */,
 				6E0E28E224E9AB8C000FA3AE /* ButtonComponent.swift in Sources */,
+				6EA09CB524FD813200FDDD9C /* PlayerViewController.swift in Sources */,
 				6E59F43824FAABFD00923BF0 /* WorkoutsTableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

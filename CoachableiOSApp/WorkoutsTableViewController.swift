@@ -37,11 +37,8 @@ final class WorkoutsTableViewController: UITableViewController {
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let workout = workouts[indexPath.row]
-        
-        self.present(
-            WorkoutViewController(workout: workout),
-            animated: true,
-            completion: nil)
+        let workoutNavigationController = UINavigationController(rootViewController: WorkoutViewController(workout: workout))
+        self.present(workoutNavigationController, animated: true)
     }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {

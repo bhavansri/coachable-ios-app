@@ -7,6 +7,7 @@
 //
 
 import FirebaseDatabase
+import FirebaseStorage
 import Foundation
 
 struct Workout {
@@ -39,6 +40,22 @@ struct Workout {
         self.description = description
         self.exercises = exercises
         self.audioFilePath = audioFilePath
+    }
+    
+    func retrieveAudioURL(completion: @escaping (URL?) -> Void) {
+        let audioReference = Storage.storage().reference(forURL: audioFilePath)
+        
+        audioReference.downloadURL { url, error in
+            if let error = error {
+                print("An error has occured when obtaining the URL. \(error.localizedDescription)")
+                completion(nil)
+            } else if let audioURL = url {
+                completion(audioURL)
+            } else {
+                print("Empty URL returned with an undefined error.")
+                completion(nil)
+            }
+        }
     }
 }
 
